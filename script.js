@@ -45,6 +45,8 @@ function printArr(arr) {
 	for(var i = 0; i < arrLength; i++) {
 		newSent += arr[i] + " ";
 	}
+	document.getElementById("moreInstructions").innerHTML = "";
+	document.getElementById("moreInstructions").style.paddingTop = 0;
 	document.getElementById("charName").innerHTML = newSent;
 }
 

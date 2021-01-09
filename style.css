@@ -17,7 +17,7 @@ html, body {
 	text-align:center;
 }
 
-.allText {
+.whiteText {
 	color: white;
 }
 
@@ -45,7 +45,7 @@ html, body {
 	width: 40vw;
 	background: transparent;
 	border-style: none none solid none;
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid #66696C;
 	transition: border-bottom 1s;
 	padding: 20px 0px 10px;
 	font-size: 2.8vh;
@@ -76,8 +76,16 @@ html, body {
 	outline:none;
 }
 
+#moreInstructions {
+	font-size: 2.3vh;
+	font-family: "Telex", sans-seriff;
+	font-style: italic;
+	color: #9D2E1C;
+	padding-top: 4vh;
+}
+
 #charName {
-	font-size: 3vh;
+	font-size: 3.0vh;
 	font-family: "Telex", sans-seriff;
 	font-weight: lighter;
 	padding-top: 7vh;
