@@ -3,7 +3,7 @@ let newSentArr;
 let arrLength;
 
 async function buttonClick() {
-	const origSentence = document.getElementById("input").value;
+	const origSentence = document.getElementById("inputField").value;
 	origSentArr = origSentence.split(" ");
 	arrLength = origSentArr.length;
 	newSentArr = new Array(arrLength);
@@ -22,6 +22,7 @@ async function buttonClick() {
 	printArr(newSentArr);
 
 }
+
 
 async function getSynonym(word) {
 	const url = 
@@ -44,5 +45,31 @@ function printArr(arr) {
 	for(var i = 0; i < arrLength; i++) {
 		newSent += arr[i] + " ";
 	}
-	document.getElementById("newSent").innerHTML = newSent;
+	document.getElementById("charName").innerHTML = newSent;
+}
+
+const sampleNames = 
+	["goblin slayer",
+	"dragon slayer",
+	"merciless villain",
+	"fairy lord",
+	"fairy hunter",
+	"dancing nymph",
+	"sparkling good witch",
+	"girl boss",
+	"damsel in distress",
+	"morally righteous hacker",
+	"scheming royalty",
+	"supernatural priest",
+	"black panther",
+	"pink panther",
+	"wistful old man",
+	"cosmic sailor",
+	"cackling wench",
+	"melancholy silhouette", 
+	"Lonely Viper"];
+
+function randSampleName() {
+	const index = Math.floor(Math.random() * sampleNames.length);
+	return sampleNames[index];
 }

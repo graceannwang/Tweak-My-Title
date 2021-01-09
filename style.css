@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Telex&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: #111;
+}
+
+#container{
+	height: 100%;
+	display:flex;
+	justify-content: center;
+	text-align:center;
+}
+
+.allText {
+	color: white;
+}
+
+#title {
+	padding: 10vh 0vh 25vh;
+	font-size: 5vw;
+}
+
+#inputAndResult {
+	padding-right: 14.5vh;
+}
+
+#instructions {
+	font-size: 2.2vh;
+	font-style: italic;
+	color: #999;
+	padding-bottom: 1vh;
+}
+
+#inputAndSubmission {
+	padding-left: 14.5vh;
+}
+
+#inputField {
+	width: 40vw;
+	background: transparent;
+	border-style: none none solid none;
+	border-bottom: 1px solid #999;
+	transition: border-bottom 1s;
+	padding: 20px 0px 10px;
+	font-size: 2.8vh;
+	font-family: "Telex", sans-seriff;
+	font-weight: lighter;
+	color: #999;
+	text-align: center;
+}
+
+#inputField:focus {
+	outline:none;
+}
+
+#inputField:hover {
+	border-bottom: 1px solid white;
+}
+
+#generateButton {
+	background:transparent;
+	font-size: 1.8vh;
+	color: #999;
+	width: 14vh;
+	padding: 0.8vh;
+	border-radius: 8px;
+}
+
+#generateButton:focus {
+	outline:none;
+}
+
+#charName {
+	font-size: 3vh;
+	font-family: "Telex", sans-seriff;
+	font-weight: lighter;
+	padding-top: 7vh;
+}
