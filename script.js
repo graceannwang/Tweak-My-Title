@@ -3,8 +3,8 @@ let newSentArr;
 let arrLength;
 
 async function buttonClick() {
-	const origSentence = document.getElementById("inputField").value;
-	origSentArr = origSentence.split(" ");
+	const charDescrField = document.getElementById("charDescrField").value;
+	origSentArr = charDescrField.split(" ");
 	arrLength = origSentArr.length;
 	newSentArr = new Array(arrLength);
 
@@ -41,22 +41,47 @@ async function getSynonym(word) {
 }
 
 function printArr(arr) {
-	let newSent = "";
+	let newCharDescr = "";
 	for(var i = 0; i < arrLength; i++) {
-		newSent += arr[i] + " ";
+		newCharDescr += arr[i] + " ";
 	}
-	document.getElementById("moreInstructions").innerHTML = "";
-	document.getElementById("moreInstructions").style.paddingTop = 0;
-	document.getElementById("charName").innerHTML = newSent;
+
+	const moreInstructions = document.getElementById("moreInstructions");
+	moreInstructions.innerHTML = "";
+	moreInstructions.style.paddingTop = 0;
+
+	const origCharName = document.getElementById("origCharNameField").value.trim();
+	const newCharName = document.getElementById("newCharNameField");
+
+	if(!origCharName) {
+		newCharName.innerHTML = newCharDescr;
+	} else {
+		newCharName.innerHTML = origCharName + " the " + newCharDescr;
+	}
 }
 
 const sampleNames = 
+	["Apollo",
+	"Mercury",
+	"Venus",
+	"Gaea",
+	"Mars",
+	"Jupiter",
+	"Saturn",
+	"Uranus",
+	"Neptune",
+	"Pluto",
+	"Athena",
+	"Grace"];
+
+
+const sampleDescriptions = 
 	["goblin slayer",
 	"dragon slayer",
 	"merciless villain",
 	"fairy lord",
 	"fairy hunter",
-	"dancing nymph",
+	"dancing sea nymph",
 	"sparkling good witch",
 	"girl boss",
 	"damsel in distress",
@@ -69,9 +94,19 @@ const sampleNames =
 	"cosmic sailor",
 	"cackling wench",
 	"melancholy silhouette", 
-	"Lonely Viper"];
+	"Lonely Viper",
+	"heart breaker",
+	"bright eyed goddess",
+	"swift messenger",
+	"red haird warlord",
+	"giver of dreams"];
 
 function randSampleName() {
 	const index = Math.floor(Math.random() * sampleNames.length);
 	return sampleNames[index];
+}
+
+function randSampleDescr() {
+	const index = Math.floor(Math.random() * sampleDescriptions.length);
+	return sampleDescriptions[index];
 }

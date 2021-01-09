@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Character Description Intensifer</title>
+		<title>Tweak My Title</title>
 		<script src="script.js"></script>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<div id="container">
 			<div id="innerContainer">
-				<h1 id="title" class="whiteText">Character Description Intensifier</h1>
+				<h1 id="title" class="whiteText">Tweak My Title</h1>
 
 				<div id="inputAndResult">
 					<div id="inputContainer">
-						<p id="instructions" class="whiteText">
-							Enter a few words that describe your character...
+						<p class="instructions" class="whiteText">
+							Enter your character name (optional)...
 						</p>
-						<div id="inputAndSubmission">
-							<input type="text" id="inputField" value="goblin slayer"></input>
+						<input type="text" class="inputField" id="origCharNameField"></input>
+						<p class="instructions" class="whiteText">
+							Enter an adjective and noun that describes your character...
+						</p>
+						<div id="descrAndSubmission">
+							<input type="text" class="inputField" id="charDescrField" value="goblin slayer"></input>
 							<script>
-								document.getElementById("inputField").value = randSampleName();
-								const inputBox = document.getElementById("inputField");
-								inputBox.addEventListener("keydown", 
+								const charName = document.getElementById("origCharNameField");
+								const charDescr = document.getElementById("charDescrField");
+								charName.value = randSampleName();
+								charDescr.value = randSampleDescr();
+								charDescr.addEventListener("keydown", 
+									(event) => {if(event.keyCode == 13) {buttonClick();}})
+								charName.addEventListener("keydown", 
 									(event) => {if(event.keyCode == 13) {buttonClick();}})
 							</script>
 							<span id="generateButtonContainer">
@@ -32,10 +40,10 @@
 					<p id="moreInstructions" class="whiteText">
 						What does your character do? <br>
 						What is your character defined by? <br>
-						Describe your character in 2-3 words. <br>
-						The more succinct, the better.
+						Describe your character in 2-3 words, <br>
+						preferrably with an adjective or two followed by a noun.
 					</p>
-					<p id="charName" class="whiteText"></p>
+					<p id="newCharNameField" class="whiteText"></p>
 
 				</div>
 			</div>

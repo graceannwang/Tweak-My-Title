@@ -8,6 +8,7 @@
 html, body {
   height: 100%;
   background: #111;
+  overflow: hidden;
 }
 
 #container{
@@ -22,32 +23,30 @@ html, body {
 }
 
 #title {
-	padding: 10vh 0vh 25vh;
+	padding: 10vh 0vh 13vh;
 	font-size: 5vw;
 }
 
 #inputAndResult {
-	padding-right: 14.5vh;
+	padding-right: 4vh;
 }
 
-#instructions {
+.instructions {
 	font-size: 2.2vh;
 	font-style: italic;
 	color: #999;
 	padding-bottom: 1vh;
 }
 
-#inputAndSubmission {
+#descrAndSubmission {
 	padding-left: 14.5vh;
 }
 
-#inputField {
-	width: 40vw;
+.inputField {
 	background: transparent;
 	border-style: none none solid none;
 	border-bottom: 1px solid #66696C;
 	transition: border-bottom 1s;
-	padding: 20px 0px 10px;
 	font-size: 2.8vh;
 	font-family: "Telex", sans-seriff;
 	font-weight: lighter;
@@ -55,12 +54,24 @@ html, body {
 	text-align: center;
 }
 
-#inputField:focus {
+.inputField:focus {
 	outline:none;
 }
 
-#inputField:hover {
+.inputField:hover {
 	border-bottom: 1px solid white;
+}
+
+#origCharNameField {
+	width: 30vw;
+	padding: 8px 0px 7px;
+	padding: none;
+	margin-bottom: 11vh;
+}
+
+#charDescrField {
+	width: 40vw;
+	padding: 10px 0px 10px;
 }
 
 #generateButton {
@@ -84,9 +95,9 @@ html, body {
 	padding-top: 4vh;
 }
 
-#charName {
-	font-size: 3.0vh;
+#newCharNameField {
+	font-size: 3.3vh;
 	font-family: "Telex", sans-seriff;
 	font-weight: lighter;
-	padding-top: 7vh;
+	margin-top: 11vh;
 }
